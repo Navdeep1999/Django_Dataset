@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First App</title>
+  </head>
+  <body>
+    <h1>This page is for dataset</h1>
+
+    <h2>THIS IS OUTPUT :{{ inject_var }}</h2>
+<link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+
+    <h2>{{ India }}</h2>
+
+
+
+    <h3> Degree offered</h3>
+
+      <table border="1">
+        {% for r in degree_rows %}
+        <tr>
+          <td>{{r.title }}</td>
+          <td>{{r.branch }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    <h3> Students</h3>
+    
+        <table border="1">
+          {% for r in student_rows %} 
+            <tr>
+              <td>{{ r.id }}</td>
+              <td>{{ r.name }}</td>
+              <td>{{ r.roll_number }}</td>
+              <td>{{ r.year }}</td>
+              <td>{{ r.dob }}</td>
+            </tr>
+          {% endfor %}
+          </table>
+
+
+
+  </body>
+</html>
